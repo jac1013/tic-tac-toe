@@ -22,4 +22,20 @@ public class GameBoardTest extends TestCase {
         gb.markBoard(Player.X, point);
         assertTrue(gb.getMarkAtPoint(point).equals(Player.X.getMark()));
     }
+
+
+    @Test
+    public void testIsWinner(){
+        GameBoard gb = new GameBoard();
+        Point point = new Point(0,0);
+        Point point2 = new Point(1,1);
+        Point point3 = new Point(2,2);
+        gb.markBoard(Player.X, point);
+        gb.markBoard(Player.X, point2);
+        gb.markBoard(Player.X, point3);
+        assertTrue(gb.isWinner(Player.X));
+
+
+
+    }
 }
