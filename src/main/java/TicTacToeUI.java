@@ -55,6 +55,7 @@ public class TicTacToeUI extends JPanel {
                     markButton(button);
                     if (gameBoard.isWinner(currentPlayer)) {
                         highlightWinnerCombination();
+                        disableAllButtons();
 
                     } else if (isDeuce()) {
                         JOptionPane.showMessageDialog(new JFrame(), "Deuce!");
@@ -108,6 +109,12 @@ public class TicTacToeUI extends JPanel {
         }
 
 
+    }
+
+    private void disableAllButtons(){
+        for (int i = 0; i < buttons.size(); i++) {
+            buttons.get(i).setEnabled(false);
+        }
     }
 
     private boolean isDeuce() {
