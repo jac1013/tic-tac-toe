@@ -36,6 +36,5 @@ public class GameBoardTest extends TestCase {
         assertTrue(gb.isWinner(Player.X));
 
 
-
     }
 }
